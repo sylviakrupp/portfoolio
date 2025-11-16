@@ -1,0 +1,500 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+
+:root {
+    --primary-color-text: #78A1BB;
+    --primary-color-headlines: #d8dfe4;
+    --primary-color-buttons: #35415d;
+    --primary-color-backgrond: #f7f8fa;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--primary-color-backgrond);
+    box-sizing: border-box; /* ei tee containerit suuremaks */
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+.x-box{
+    justify-self: end;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;          /* center the character */
+    background-color: var(--primary-color-text);
+    border-radius: 6px;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    color: var(--primary-color-buttons);
+    padding: none;
+    margin-right: 15px;
+    position: relative;
+    top: 25px;
+    font-weight: 900;
+}
+
+.menu-panel {
+    position: absolute;
+    top: 0;
+    right: -215px;
+    width: 215px;
+    height: 380px;
+    background-color: var(--primary-color-buttons);
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    transition: right 1s ease-in-out;
+}
+
+
+
+.menu-panel ul {
+    list-style: none;
+    padding: 40px 40px;
+}
+
+.menu-panel ul li {
+    margin-bottom:20px;
+}
+
+.menu-panel ul li a {
+    text-decoration: none;
+    color: var(--primary-color-text);
+}
+
+.menu-panel.active {
+    right:0;
+}
+
+.container {
+    width: 100%;
+    color: var(--primary-color-text);
+    background-color: var(--primary-color-backgrond);
+}
+
+
+
+.line {
+    width: 70%;
+    height: 3px;
+    background-color: var(--primary-color-text);
+    border-radius: 3px;
+}
+
+
+
+hr {
+    width: 151px;
+    height: 4px;
+    background-color: var(--primary-color-text);
+    border-radius: 8px;
+    margin-top:30px;
+    border: none;
+}
+
+h3 {
+    font-size: 32px;
+    font-family: "Russo One", sans-serif;
+    text-align: center;
+    color: var(--primary-color-text);
+    margin: 8px;
+}
+
+.headline p {
+    display:none;
+}
+
+
+.gallery {
+    width: 100%;
+    text-align: center;
+    
+}
+
+    .frame {
+        display:none;
+    }
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 250px; /* adjust to smallest acceptable size */
+}
+
+.gallery video {
+    display: inline-block;
+    border-radius: 3%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.gallery-item video {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item video:hover {
+    transform: scale(1.07);
+    box-shadow: 10px 10px 7px #77777a24;
+}
+
+.my-clients {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.my-clients-cards h4 {
+    font-size: 22px;
+    font-family: "Russo One", sans-serif;
+    color: var(--primary-color-headlines);
+    margin: 15px;
+}
+
+.card span {
+    display: inline-block;
+    font-size: 18px;
+    color: var(--primary-color-headlines);
+    background-color: var(--primary-color-text);
+    border-radius: 15px;
+    padding: 4px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--primary-color-text);
+    margin: 30px;
+}
+
+.contact {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contact button {
+    border: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--primary-color-headlines);
+    background-color: var(--primary-color-buttons);
+    padding: 15px 51px;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(178, 196, 214);
+}
+
+.contact-form {
+    display: none;
+}
+
+.contact-details {
+    display: none;
+}
+
+.contact-intro {
+    display: none;
+}
+
+.socialmedia {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.social-icons ul{
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/*tahvel*/
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+
+
+
+
+
+    .headline p {
+        display:none;
+    }
+
+    h3 {
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    hr {
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: auto; 
+    }
+
+    .frame {
+        display:none;
+    }
+
+    /* hover effect */
+    .gallery-item video,
+    .gallery-item img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery-item video:hover,
+    .gallery-item img:hover {
+        transform: scale(1.07);
+        box-shadow: 10px 10px 7px #77777a24;
+    }
+
+    .my-clients-cards p {
+        width: 365px;
+        margin: 15px auto;
+    }
+
+    .card {
+        margin-top: 50px;
+    }
+
+ 
+}
+
+/*arvuti*/
+
+@media (min-width: 1025px) {
+
+
+    .menu {
+        display:none;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+
+    .menu-list {
+        display: inline-block;
+        float: right;
+    }
+
+    .menu-panel {
+        display: none;
+    }
+
+    .menu-list ul {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--primary-color-headlines);
+        margin-right:30px;
+    }
+
+    .menu-list ul li {
+        display: inline-block;
+        margin-right: 12px;
+    }
+
+    .menu-list a {
+        text-decoration: none;
+        color: var(--primary-color-text);
+    }
+
+    .menu-list ul li a {
+        display: inline-block;
+        transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+    }
+
+    .menu-list a:hover {
+        transform: scale(1.2);
+        text-shadow: 4px 4px 3px #7a777724;
+    }
+
+
+
+    h3 {
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    hr {
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: auto; 
+    }
+
+    .headline p {
+        display:block;
+        text-align: left;
+        margin-left: 30px;  
+        margin-top: 30px;
+        margin-bottom: 40px;
+        width: 600px;
+    }
+
+    .frame {
+        display:none;
+    
+    }
+
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto; /* adjust to smallest acceptable size */
+    flex: 1 1 250px;    /* items grow and shrink to fit container */
+    box-sizing: border-box;
+    margin-left: 30px;
+}
+
+     .gallery {
+           max-width: calc(100% - 60px);
+    display: flex;
+    flex-wrap: wrap;       /* allow items to go to next row */
+    gap: 30px;
+    justify-content: left; /* center items inside container */
+
+    }
+
+    .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* modern way to enforce 16:9 */
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+}   
+
+
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* kogu video mahtub, ei lõika ära */
+    background: black;  
+     transition: transform 0.3s ease-in-out, box-shadow 0.23s ease-in-out;
+     border-radius: 8px;
+}
+
+.gallery-item video,
+.gallery-item img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item video:hover,
+.gallery-item img:hover {
+    transform: scale(1.07);
+    box-shadow: 10px 10px 7px #77777a24;
+}
+
+    .gallery-item {
+        display: block;
+        text-align: center; 
+        min-width: 200px; /* shrink on smaller screens */
+    max-width: 520px;
+    }
+
+
+    .my-clients-cards p {
+        
+        width: 365px;
+        margin: 15px auto;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;  
+        margin-top: 50px;
+        padding-left: 30px;
+    }
+
+    .card img {
+        grid-column: 1;
+        display:block;
+        max-width: 100%; /* make sure image stays inside its column */
+        width: 240px;
+        padding:30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+        .card img {
+        grid-column: 2;
+        display:block;
+        max-width: 100%; /* make sure image stays inside its column */
+        width: 240px;
+        padding:30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card h4 {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .card p {
+        margin: 0;
+        width: auto;
+        margin-top: 20px;
+    }
+
+    .my-clients-info {
+        display: block;
+        text-align: left;
+        margin-right: 50px;
+        padding-left: 30px;
+    }
+
+    .skills{
+    display: flex;
+    gap: 10px; /* space between spans */
+    align-items: center; /* vertical alignment if needed */
+    }
+
+   
+ 
+
+
+}
