@@ -110,6 +110,10 @@ h3 {
     display:none;
 }
 
+.document-item {
+    align-items: center;
+    text-align: center;
+}
 
 .gallery {
     width: 100%;
@@ -371,6 +375,11 @@ footer {
         display:none;
     
     }
+    .document-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
 
 .gallery-item {
